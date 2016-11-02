@@ -1,15 +1,40 @@
 #App Name: Reciply
-##Heading 2: Debleena Sengupta, Hope Ludwinski
-Heading 2: Our app allows users to not only store recipies but also list out leftover items they have in the kitchen. The app will give suggestions of what recipies they can make with that food. This will discourage wasting of food and will be a money saver! 
-Raw Text: [Here, you will explain in 1-2 lines why your app exists. Think of this as your "blurb". e.g. Meowtfits is a shopping app that allows users to buy different outfits for their cats.]
-Heading 2: Features
-Bullet Points: [List each feature you will implement. e.g. Ability to view outfit pages with photos. Filter by cat size. Users can share outfit page listings with friends.]
-Heading 2: Control Flow
-Bullet Points: [Walk us through how your app would work - how the user would interact with it, starting from the initial screen. e.g. Users are initially presented with a splash screen, where they can log in or browse as a guest. Once done, they see a curated list of some of the newest and coolest cat outfits. Tapping on a cat outfit entry takes you to that cat outfit's listing page.]
-Heading 2: Implementation
-Heading 3: Model
-Bullet Points: [List the files in your Model, e.g. Item.Swift]
-Heading 3: View
-Bullet Points: [List your different Views, e.g. OutfitListTableView]
-Heading 3: Controller
-Bullet Points: [List the files in your Controller, e.g. OutfitListTableViewController]
+##Authors: 
+* Debleena Sengupta
+* Hope Ludwinski
+
+##Purpose: 
+Our app allows users to not only store recipies but also list out leftover items 
+they have in the kitchen. The app will give suggestions of what recipies they 
+can make with that food. This will discourage wasting of food and will be a 
+money saver! 
+##Features:
+* Add new recipes
+* list out leftover food items and search existing recipe list to see which recipe will take the least additonal ingrediants to make.
+* ability to add items to grocery list
+*  find recipes online using leftover items.
+
+##Control Flow:
+* When user logs on they can see most recently added recipes and have option to add new recipe
+* User can search existing recipes by title or ingredeints
+* "find recipe" feature will allow user to input recipe or ingrdients and an online search will produce a list of possible results
+
+##Implementation:
+
+###Model:
+* recipes.swift
+* groceryList.swift
+
+###View:
+* currentRecipeTableView.swift
+* addRecipeView.swift
+* findRecipe.swift
+* groceryListTableView.swift
+* recipeDetailView.swift
+
+###Controller:
+* currentRecipeTableViewController.swift
+* addRecipeViewController.swift
+* findRecipeController.swift
+* groceryListViewController.swift
+* recipeDetailView Controller.swift

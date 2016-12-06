@@ -8,13 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		745E36441DF65DDC00C02491 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745E36431DF65DDC00C02491 /* AppDelegate.swift */; };
-		745E36461DF65DDC00C02491 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745E36451DF65DDC00C02491 /* FirstViewController.swift */; };
-		745E36481DF65DDC00C02491 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745E36471DF65DDC00C02491 /* SecondViewController.swift */; };
 		745E364B1DF65DDC00C02491 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 745E36491DF65DDC00C02491 /* Main.storyboard */; };
 		745E364D1DF65DDC00C02491 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 745E364C1DF65DDC00C02491 /* Assets.xcassets */; };
 		745E36501DF65DDC00C02491 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 745E364E1DF65DDC00C02491 /* LaunchScreen.storyboard */; };
 		745E365B1DF65DDC00C02491 /* ReciplyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745E365A1DF65DDC00C02491 /* ReciplyTests.swift */; };
 		745E36661DF65DDC00C02491 /* ReciplyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745E36651DF65DDC00C02491 /* ReciplyUITests.swift */; };
+		745E36741DF6620600C02491 /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745E36731DF6620600C02491 /* RecipeViewController.swift */; };
+		745E36761DF6621A00C02491 /* GroceryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745E36751DF6621A00C02491 /* GroceryListViewController.swift */; };
+		745E36781DF6622800C02491 /* LeftoversViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745E36771DF6622800C02491 /* LeftoversViewController.swift */; };
+		745E367A1DF6623200C02491 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745E36791DF6623200C02491 /* SearchViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,8 +39,6 @@
 /* Begin PBXFileReference section */
 		745E36401DF65DDC00C02491 /* Reciply.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reciply.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		745E36431DF65DDC00C02491 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		745E36451DF65DDC00C02491 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		745E36471DF65DDC00C02491 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		745E364A1DF65DDC00C02491 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		745E364C1DF65DDC00C02491 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		745E364F1DF65DDC00C02491 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +49,10 @@
 		745E36611DF65DDC00C02491 /* ReciplyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReciplyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		745E36651DF65DDC00C02491 /* ReciplyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReciplyUITests.swift; sourceTree = "<group>"; };
 		745E36671DF65DDC00C02491 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		745E36731DF6620600C02491 /* RecipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
+		745E36751DF6621A00C02491 /* GroceryListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroceryListViewController.swift; sourceTree = "<group>"; };
+		745E36771DF6622800C02491 /* LeftoversViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftoversViewController.swift; sourceTree = "<group>"; };
+		745E36791DF6623200C02491 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,8 +104,10 @@
 			isa = PBXGroup;
 			children = (
 				745E36431DF65DDC00C02491 /* AppDelegate.swift */,
-				745E36451DF65DDC00C02491 /* FirstViewController.swift */,
-				745E36471DF65DDC00C02491 /* SecondViewController.swift */,
+				745E36731DF6620600C02491 /* RecipeViewController.swift */,
+				745E36751DF6621A00C02491 /* GroceryListViewController.swift */,
+				745E36771DF6622800C02491 /* LeftoversViewController.swift */,
+				745E36791DF6623200C02491 /* SearchViewController.swift */,
 				745E36491DF65DDC00C02491 /* Main.storyboard */,
 				745E364C1DF65DDC00C02491 /* Assets.xcassets */,
 				745E364E1DF65DDC00C02491 /* LaunchScreen.storyboard */,
@@ -265,9 +271,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				745E36481DF65DDC00C02491 /* SecondViewController.swift in Sources */,
+				745E367A1DF6623200C02491 /* SearchViewController.swift in Sources */,
+				745E36761DF6621A00C02491 /* GroceryListViewController.swift in Sources */,
+				745E36781DF6622800C02491 /* LeftoversViewController.swift in Sources */,
 				745E36441DF65DDC00C02491 /* AppDelegate.swift in Sources */,
-				745E36461DF65DDC00C02491 /* FirstViewController.swift in Sources */,
+				745E36741DF6620600C02491 /* RecipeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

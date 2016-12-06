@@ -13,10 +13,11 @@
 		745E36501DF65DDC00C02491 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 745E364E1DF65DDC00C02491 /* LaunchScreen.storyboard */; };
 		745E365B1DF65DDC00C02491 /* ReciplyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745E365A1DF65DDC00C02491 /* ReciplyTests.swift */; };
 		745E36661DF65DDC00C02491 /* ReciplyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745E36651DF65DDC00C02491 /* ReciplyUITests.swift */; };
-		745E36741DF6620600C02491 /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745E36731DF6620600C02491 /* RecipeViewController.swift */; };
-		745E36761DF6621A00C02491 /* GroceryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745E36751DF6621A00C02491 /* GroceryListViewController.swift */; };
-		745E36781DF6622800C02491 /* LeftoversViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745E36771DF6622800C02491 /* LeftoversViewController.swift */; };
-		745E367A1DF6623200C02491 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745E36791DF6623200C02491 /* SearchViewController.swift */; };
+		745E367E1DF666AE00C02491 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745E367D1DF666AE00C02491 /* SearchViewController.swift */; };
+		745E36801DF666C100C02491 /* GroceryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745E367F1DF666C100C02491 /* GroceryListViewController.swift */; };
+		745E36821DF666D100C02491 /* LeftoversViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745E36811DF666D100C02491 /* LeftoversViewController.swift */; };
+		74E3C2621DF66E6E00406A7E /* RecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E3C2611DF66E6E00406A7E /* RecipesViewController.swift */; };
+		74E3C2641DF6785D00406A7E /* NewRecipeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E3C2631DF6785D00406A7E /* NewRecipeDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,10 +50,11 @@
 		745E36611DF65DDC00C02491 /* ReciplyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReciplyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		745E36651DF65DDC00C02491 /* ReciplyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReciplyUITests.swift; sourceTree = "<group>"; };
 		745E36671DF65DDC00C02491 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		745E36731DF6620600C02491 /* RecipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
-		745E36751DF6621A00C02491 /* GroceryListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroceryListViewController.swift; sourceTree = "<group>"; };
-		745E36771DF6622800C02491 /* LeftoversViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftoversViewController.swift; sourceTree = "<group>"; };
-		745E36791DF6623200C02491 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		745E367D1DF666AE00C02491 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		745E367F1DF666C100C02491 /* GroceryListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroceryListViewController.swift; sourceTree = "<group>"; };
+		745E36811DF666D100C02491 /* LeftoversViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftoversViewController.swift; sourceTree = "<group>"; };
+		74E3C2611DF66E6E00406A7E /* RecipesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecipesViewController.swift; path = ../RecipesViewController.swift; sourceTree = "<group>"; };
+		74E3C2631DF6785D00406A7E /* NewRecipeDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewRecipeDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,11 +106,12 @@
 			isa = PBXGroup;
 			children = (
 				745E36431DF65DDC00C02491 /* AppDelegate.swift */,
-				745E36731DF6620600C02491 /* RecipeViewController.swift */,
-				745E36751DF6621A00C02491 /* GroceryListViewController.swift */,
-				745E36771DF6622800C02491 /* LeftoversViewController.swift */,
-				745E36791DF6623200C02491 /* SearchViewController.swift */,
+				74E3C2611DF66E6E00406A7E /* RecipesViewController.swift */,
 				745E36491DF65DDC00C02491 /* Main.storyboard */,
+				74E3C2631DF6785D00406A7E /* NewRecipeDetailViewController.swift */,
+				745E367D1DF666AE00C02491 /* SearchViewController.swift */,
+				745E367F1DF666C100C02491 /* GroceryListViewController.swift */,
+				745E36811DF666D100C02491 /* LeftoversViewController.swift */,
 				745E364C1DF65DDC00C02491 /* Assets.xcassets */,
 				745E364E1DF65DDC00C02491 /* LaunchScreen.storyboard */,
 				745E36511DF65DDC00C02491 /* Info.plist */,
@@ -271,11 +274,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				745E367A1DF6623200C02491 /* SearchViewController.swift in Sources */,
-				745E36761DF6621A00C02491 /* GroceryListViewController.swift in Sources */,
-				745E36781DF6622800C02491 /* LeftoversViewController.swift in Sources */,
+				745E36801DF666C100C02491 /* GroceryListViewController.swift in Sources */,
+				745E367E1DF666AE00C02491 /* SearchViewController.swift in Sources */,
+				74E3C2641DF6785D00406A7E /* NewRecipeDetailViewController.swift in Sources */,
+				745E36821DF666D100C02491 /* LeftoversViewController.swift in Sources */,
+				74E3C2621DF66E6E00406A7E /* RecipesViewController.swift in Sources */,
 				745E36441DF65DDC00C02491 /* AppDelegate.swift in Sources */,
-				745E36741DF6620600C02491 /* RecipeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -526,6 +530,7 @@
 				745E366C1DF65DDC00C02491 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		745E366D1DF65DDC00C02491 /* Build configuration list for PBXNativeTarget "ReciplyTests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +539,7 @@
 				745E366F1DF65DDC00C02491 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		745E36701DF65DDC00C02491 /* Build configuration list for PBXNativeTarget "ReciplyUITests" */ = {
 			isa = XCConfigurationList;
@@ -542,6 +548,7 @@
 				745E36721DF65DDC00C02491 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

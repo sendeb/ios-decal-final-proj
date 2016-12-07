@@ -9,7 +9,8 @@
 import UIKit
 
 class AddUIViewController: UIViewController {
-
+    
+    @IBOutlet weak var directionsTxT: UITextField!
     @IBOutlet weak var contentTxT: UITextField!
     @IBOutlet weak var titleTxT: UITextField!
 
@@ -19,6 +20,7 @@ class AddUIViewController: UIViewController {
         // Do any additional setup after loading the view.
         titleTxT.placeholder = "Recipe Name"
         contentTxT.placeholder = "Ingredients"
+        directionsTxT.placeholder = "Directions"
         
     }
 
@@ -40,7 +42,7 @@ class AddUIViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "done" {
-            let t = [titleTxT.text!, contentTxT.text!, String(Date().timeIntervalSince1970), "false"]
+            let t = [titleTxT.text!, contentTxT.text!, directionsTxT.text!, "false"]
             let vc = segue.destination as! UINavigationController
             let tvc = vc.topViewController as! TodoUITableViewController
             var todos = UserDefaults.standard.object(forKey: "Todos") as! [[String]]

@@ -87,11 +87,7 @@ class TodoUITableViewController: UITableViewController {
         if UserDefaults.standard.object(forKey: "Todos") != nil {
             let todos = UserDefaults.standard.object(forKey: "Todos") as! [[String]]
             for t in todos {
-                if pass24(from: Double(t[2])!, to: Date().timeIntervalSince1970) && t[3] == "true" {
-                }
-                else {
-                    Todos.append(t)
-                }
+                Todos.append(t)
             }
         }
         saveTodos()
@@ -109,6 +105,7 @@ class TodoUITableViewController: UITableViewController {
             let detailViewController: DetailViewController = segue.destination as! DetailViewController
             let selectedIndexPath:NSIndexPath = self.tableView.indexPathForSelectedRow! as NSIndexPath
             detailViewController.storedData = Todos[selectedIndexPath.row]
+            detailViewController.index = selectedIndexPath
         }
     }
 

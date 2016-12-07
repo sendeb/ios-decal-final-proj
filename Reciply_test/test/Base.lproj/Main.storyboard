@@ -117,6 +117,20 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Directions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KeJ-zB-J3K">
+                                <frame key="frameInset" minX="46" minY="391" width="78" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O6p-wQ-xYg">
+                                <frame key="frameInset" minX="46" minY="420" width="283" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -133,7 +147,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="contentTxT" destination="bjl-Fa-BZB" id="oKW-Gm-qNH"/>
+                        <outlet property="contentTxT" destination="O6p-wQ-xYg" id="XTQ-0h-409"/>
+                        <outlet property="directionsTxT" destination="O6p-wQ-xYg" id="db6-XM-gdd"/>
                         <outlet property="titleTxT" destination="zQS-6D-LzW" id="Glh-bO-vpb"/>
                     </connections>
                 </viewController>
@@ -262,18 +277,39 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Directions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eYG-ny-Z3t">
+                                <frame key="frameInset" minX="32" minY="475" width="78" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OJd-p4-3sL">
+                                <frame key="frameInset" minX="32" minY="504" width="283" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="7zs-e6-FLr"/>
+                    <navigationItem key="navigationItem" id="7zs-e6-FLr">
+                        <barButtonItem key="rightBarButtonItem" title="Save Changes" id="rLD-w9-YzJ">
+                            <connections>
+                                <segue destination="9yZ-8I-F3z" kind="show" identifier="done" id="eGI-v0-gwj"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="directions" destination="OJd-p4-3sL" id="6Dv-sn-bgu"/>
                         <outlet property="ingrdientsName" destination="CWe-ME-lJf" id="rtO-D4-8xb"/>
                         <outlet property="recipeName" destination="ryt-rC-TPQ" id="Ucz-oj-Heb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cbe-mF-OTq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3606" y="933"/>
+            <point key="canvasLocation" x="3605.5999999999999" y="932.38380809595208"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="TZY-XP-cis">
@@ -295,6 +331,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="EWd-F8-ZH4"/>
+        <segue reference="eGI-v0-gwj"/>
     </inferredMetricsTieBreakers>
 </document>

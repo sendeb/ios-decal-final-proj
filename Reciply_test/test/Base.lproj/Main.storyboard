@@ -154,7 +154,7 @@
                                 <rect key="frame" x="0.0" y="92" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NRH-hu-ihz" id="kRL-JU-2Fm">
-                                    <frame key="frameInset" width="342" height="99"/>
+                                    <frame key="frameInset" width="342" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="adb-Zn-PfW" userLabel="TitleLabel">
@@ -225,7 +225,7 @@
         <!--Detail View Controller-->
         <scene sceneID="7bi-QS-vKv">
             <objects>
-                <viewController id="Xft-WM-MCP" customClass="DetailViewController" sceneMemberID="viewController">
+                <viewController id="Xft-WM-MCP" customClass="DetailViewController" customModule="test" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ay7-zy-nXr"/>
                         <viewControllerLayoutGuide type="bottom" id="aPv-sN-CQa"/>

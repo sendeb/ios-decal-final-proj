@@ -127,10 +127,14 @@ class TodoUITableViewController: UITableViewController {
             let vc = segue.destination as! StatUIViewController
             vc.numberfinished = countfinished()
         }
-        if ((segue != nil) && (segue.identifier == "showDetail")) {
+        if (segue.identifier == "showDetail") {
             let detailViewController: DetailViewController = segue.destination as! DetailViewController
             let selectedIndexPath:NSIndexPath = self.tableView.indexPathForSelectedRow! as NSIndexPath
-            detailViewController.storedData = Todos[selectedIndexPath.row]
+            if searchController.isActive && searchController.searchBar.text != "" {
+                detailViewController.storedData = filteredRecipes[selectedIndexPath.row]
+            } else {
+                detailViewController.storedData = Todos[selectedIndexPath.row]
+            }
             detailViewController.index = selectedIndexPath
         }
     }

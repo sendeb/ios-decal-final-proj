@@ -46,7 +46,7 @@ class AddUIViewController: UIViewController {
             let vc = segue.destination as! UINavigationController
             let tvc = vc.topViewController as! TodoUITableViewController
             var todos = UserDefaults.standard.object(forKey: "Todos") as! [[String]]
-            todos.append(t)
+            todos.insert(t, at: 0)
             UserDefaults.standard.set(todos, forKey: "Todos")
             tvc.tableView.reloadData()
         }

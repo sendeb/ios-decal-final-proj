@@ -43,6 +43,18 @@ class DetailViewController: UIViewController {
             let tvc = vc.topViewController as! TodoUITableViewController
             var todos = UserDefaults.standard.object(forKey: "Todos") as! [[String]]
             todos[index.row] = t
+            var tmp = todos[index.row]
+            var i = 1
+            var prev = todos[0]
+            var curr = todos[0]
+            todos[0] = t
+            while i <= index.row{
+                curr = todos[i]
+                todos[i] = prev
+                prev = curr
+                i = i + 1
+            }
+            
             //todos.remove(at: .indexPath.row)
             //tableView.deleteRows(at: [indexPath], with: .fade)
             UserDefaults.standard.set(todos, forKey: "Todos")

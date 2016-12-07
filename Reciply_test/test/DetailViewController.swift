@@ -10,6 +10,7 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
+    @IBOutlet weak var groceryButton: UIButton!
     @IBOutlet weak var directions: UITextField!
     @IBOutlet weak var recipeName: UITextField!
     @IBOutlet weak var ingrdientsName: UITextField!
@@ -38,6 +39,19 @@ class DetailViewController: UIViewController {
     
     
      // MARK: - Navigation
+    @IBAction func addToGroceryList(_ sender: AnyObject) {
+        groceryButton.setTitle("ADDED", for: .normal)
+        let t = ingrdientsName.text!.components(separatedBy: ",")
+        var groceries = UserDefaults.standard.object(forKey: "groceryList") as! [String]
+        groceries = groceries + t
+        print (t)
+        print (groceries)
+        UserDefaults.standard.set(groceries, forKey: "groceryList")
+        var tmp = UserDefaults.standard.object(forKey: "groceryList") as! [String]
+        print ("tmp count")
+        print(tmp.count)
+        
+    }
      
      // In a storyboard-based application, you will often want to do a little preparation before navigation
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		377910BC1DF898AC0024A2C2 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377910BB1DF898AC0024A2C2 /* DetailViewController.swift */; };
+		377910C01DF8BAC40024A2C2 /* GroceryListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377910BF1DF8BAC40024A2C2 /* GroceryListTableViewController.swift */; };
 		C25BAE1D1DB44B3E0090C7C8 /* TodoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25BAE1C1DB44B3E0090C7C8 /* TodoTableViewCell.swift */; };
 		C25BAE1E1DB44B3E0090C7C8 /* TodoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25BAE1C1DB44B3E0090C7C8 /* TodoTableViewCell.swift */; };
 		C25BAE1F1DB44B3E0090C7C8 /* TodoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25BAE1C1DB44B3E0090C7C8 /* TodoTableViewCell.swift */; };
@@ -49,6 +50,7 @@
 
 /* Begin PBXFileReference section */
 		377910BB1DF898AC0024A2C2 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		377910BF1DF8BAC40024A2C2 /* GroceryListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroceryListTableViewController.swift; sourceTree = "<group>"; };
 		C25BAE1C1DB44B3E0090C7C8 /* TodoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoTableViewCell.swift; sourceTree = "<group>"; };
 		C2A9F1A81DB4337800B67350 /* test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2A9F1AB1DB4337900B67350 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				C2A9F1E41DB434BD00B67350 /* StatUIViewController.swift */,
 				C25BAE1C1DB44B3E0090C7C8 /* TodoTableViewCell.swift */,
 				377910BB1DF898AC0024A2C2 /* DetailViewController.swift */,
+				377910BF1DF8BAC40024A2C2 /* GroceryListTableViewController.swift */,
 			);
 			path = test;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 				C2A9F1AC1DB4337900B67350 /* AppDelegate.swift in Sources */,
 				C2A9F1E11DB434AC00B67350 /* AddUIViewController.swift in Sources */,
 				C2A9F1B41DB4337900B67350 /* test.xcdatamodeld in Sources */,
+				377910C01DF8BAC40024A2C2 /* GroceryListTableViewController.swift in Sources */,
 				377910BC1DF898AC0024A2C2 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

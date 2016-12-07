@@ -156,6 +156,75 @@
             </objects>
             <point key="canvasLocation" x="3730.4000000000001" y="119.1904047976012"/>
         </scene>
+        <!--Title-->
+        <scene sceneID="xVA-iR-SqD">
+            <objects>
+                <tableViewController id="tvP-U2-Cbu" customClass="GroceryListTableViewController" customModule="test" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="8pt-6d-MJ8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="TodoTableCell" rowHeight="100" id="f2f-N7-sMh" customClass="TodoTableViewCell" customModule="test" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="375" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="f2f-N7-sMh" id="Me9-Jr-vL2">
+                                    <frame key="frameInset" width="342" height="100"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q5s-w3-Pzz" userLabel="TitleLabel">
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="XCt-Fh-TAD"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WEF-d3-j79" userLabel="DescriptionLabel">
+                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qgP-3P-TB6">
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="80" id="LcT-pt-jsK"/>
+                                                <constraint firstAttribute="height" constant="80" id="nSW-sk-tOX"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="q5s-w3-Pzz" firstAttribute="top" secondItem="Me9-Jr-vL2" secondAttribute="topMargin" constant="5" id="40O-iW-WfG"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="WEF-d3-j79" secondAttribute="bottom" constant="5" id="Otb-Jx-EWx"/>
+                                        <constraint firstItem="WEF-d3-j79" firstAttribute="leading" secondItem="Me9-Jr-vL2" secondAttribute="leadingMargin" constant="5" id="PUQ-U7-kLf"/>
+                                        <constraint firstItem="qgP-3P-TB6" firstAttribute="top" secondItem="Me9-Jr-vL2" secondAttribute="topMargin" constant="5" id="U2f-oT-GJa"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="WEF-d3-j79" secondAttribute="trailing" constant="90" id="V1p-kk-8Nb"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="qgP-3P-TB6" secondAttribute="trailing" constant="5" id="emg-ig-WxQ"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="q5s-w3-Pzz" secondAttribute="trailing" constant="90" id="qy2-QT-IUN"/>
+                                        <constraint firstItem="q5s-w3-Pzz" firstAttribute="leading" secondItem="Me9-Jr-vL2" secondAttribute="leadingMargin" constant="5" id="x4N-bo-mB5"/>
+                                        <constraint firstItem="WEF-d3-j79" firstAttribute="top" secondItem="q5s-w3-Pzz" secondAttribute="bottom" constant="5" id="xX9-MG-sWG"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="descriptionLabel" destination="WEF-d3-j79" id="EUk-o7-F8f"/>
+                                    <outlet property="doneLabel" destination="qgP-3P-TB6" id="ze5-l8-E4o"/>
+                                    <outlet property="titleLabel" destination="q5s-w3-Pzz" id="rp4-Vs-zvN"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="tvP-U2-Cbu" id="HAO-OO-tdh"/>
+                            <outlet property="delegate" destination="tvP-U2-Cbu" id="qLp-ed-Cgb"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Title" id="4wh-xo-4et"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qB5-je-DK9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1742" y="264"/>
+        </scene>
         <!--TodoUI Table View Controller-->
         <scene sceneID="FbY-ls-JDw">
             <objects>
@@ -221,9 +290,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="ToQ-wU-ZjS">
-                        <barButtonItem key="leftBarButtonItem" title="Stat" id="VKj-Zi-0sy">
+                        <barButtonItem key="leftBarButtonItem" title="Grocery List" id="VKj-Zi-0sy">
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="show" identifier="ShowStat" id="AyF-WH-rMd"/>
+                                <segue destination="tvP-U2-Cbu" kind="show" identifier="groceryList" id="LEk-Cl-ff1"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" systemItem="add" id="KNs-8w-2N9">
@@ -291,6 +360,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7oZ-Lc-EEN">
+                                <frame key="frameInset" minX="85" minY="81" width="205" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Add Ingrdients to Grocery List"/>
+                                <connections>
+                                    <action selector="addToGroceryList:" destination="Xft-WM-MCP" eventType="touchUpInside" id="tqt-j4-QJT"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -303,6 +380,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="directions" destination="OJd-p4-3sL" id="6Dv-sn-bgu"/>
+                        <outlet property="groceryButton" destination="7oZ-Lc-EEN" id="ZCX-3M-dR9"/>
                         <outlet property="ingrdientsName" destination="CWe-ME-lJf" id="rtO-D4-8xb"/>
                         <outlet property="recipeName" destination="ryt-rC-TPQ" id="Ucz-oj-Heb"/>
                     </connections>

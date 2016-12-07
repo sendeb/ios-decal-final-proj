@@ -32,6 +32,10 @@ class TodoUITableViewController: UITableViewController {
         searchController.dimsBackgroundDuringPresentation = false
         definesPresentationContext = true
         tableView.tableHeaderView = searchController.searchBar
+        var tmp = UserDefaults.standard.object(forKey: "groceryList") as! [String]
+        print ("in main")
+        print(tmp.count)
+        
     }
     
     func filterContentForSearchText(searchText: String, scope: String = "All") {
@@ -55,6 +59,9 @@ class TodoUITableViewController: UITableViewController {
         if searchController.isActive && searchController.searchBar.text != "" {
             return filteredRecipes.count
         }
+        var tmp = UserDefaults.standard.object(forKey: "groceryList") as! [String]
+        print ("in main")
+        print(tmp.count)
         return Todos.count
     }
 
@@ -136,6 +143,10 @@ class TodoUITableViewController: UITableViewController {
                 detailViewController.storedData = Todos[selectedIndexPath.row]
             }
             detailViewController.index = selectedIndexPath
+        }
+        if (segue.identifier == "groceryList"){
+            let gvc: GroceryListTableViewController = segue.destination as! GroceryListTableViewController
+            gvc.tableView.reloadData()
         }
     }
 

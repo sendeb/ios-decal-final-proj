@@ -32,6 +32,22 @@ class GroceryListTableViewController: UITableViewController {
         saveGroceries()
     }
 
+    @IBAction func addGroceries(_ sender: AnyObject) {
+        let alert = UIAlertController(title: "Some Title", message: "Enter a text", preferredStyle: .alert)
+        alert.addTextField { (textField) in textField.text = "Some default text"}
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in
+            let textField = alert?.textFields![0] // Force unwrapping because we know it exists.
+            self.groceryList.insert((textField?.text)!, at:0)
+            UserDefaults.standard.set(self.groceryList, forKey: "groceryList")
+            self.tableView.reloadData()
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Cancel", style: .default, handler: { [weak alert] (_) in
+        }))
+        
+        // 4. Present the alert.
+        self.present(alert, animated: true, completion: nil)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

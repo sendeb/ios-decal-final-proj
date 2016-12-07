@@ -172,20 +172,21 @@
                                     <frame key="frameInset" width="342" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q5s-w3-Pzz" userLabel="TitleLabel">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q5s-w3-Pzz" userLabel="TitleLabel">
+                                            <frame key="frameInset" minX="13" minY="13" width="231" height="52"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="30" id="XCt-Fh-TAD"/>
                                             </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WEF-d3-j79" userLabel="DescriptionLabel">
                                             <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WEF-d3-j79" userLabel="DescriptionLabel">
-                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qgP-3P-TB6">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qgP-3P-TB6">
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="80" id="LcT-pt-jsK"/>
                                                 <constraint firstAttribute="height" constant="80" id="nSW-sk-tOX"/>
@@ -219,11 +220,17 @@
                             <outlet property="delegate" destination="tvP-U2-Cbu" id="qLp-ed-Cgb"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Title" id="4wh-xo-4et"/>
+                    <navigationItem key="navigationItem" title="Title" id="4wh-xo-4et">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="W2T-JA-Pwe">
+                            <connections>
+                                <action selector="addGroceries:" destination="tvP-U2-Cbu" id="ILs-cY-wXx"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qB5-je-DK9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1742" y="264"/>
+            <point key="canvasLocation" x="1741.5999999999999" y="263.11844077961024"/>
         </scene>
         <!--TodoUI Table View Controller-->
         <scene sceneID="FbY-ls-JDw">

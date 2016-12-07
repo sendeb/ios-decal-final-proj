@@ -12,7 +12,10 @@ class TodoUITableViewController: UITableViewController {
 
     var Todos = [[String]]()
     var Colors = [UIColor]()
-
+    let searchController = UISearchController(searchResultsController: nil)
+    
+    var filteredRecipes = [[String]]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,6 +26,19 @@ class TodoUITableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         loadColors()
         loadSavedTodos()
+        
+        //search stuff
+        searchController.searchResultsUpdater = self
+        searchController.dimsBackgroundDuringPresentation = false
+        definesPresentationContext = true
+        tableView.tableHeaderView = searchController.searchBar
+    }
+    
+    func filterContentForSearchText(searchText: String, scope: String = "All") {
+        filteredRecipes = Todos.filter { recipe in
+            return recipe[0].lowercased().contains(searchText.lowercased()) || recipe[1].lowercased().contains(searchText.lowercased())
+        }
+        tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,12 +52,20 @@ class TodoUITableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if searchController.isActive && searchController.searchBar.text != "" {
+            return filteredRecipes.count
+        }
         return Todos.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TodoTableCell", for: indexPath) as! TodoTableViewCell
-        let t = Todos[indexPath.row]
+        let t: [String]
+        if searchController.isActive && searchController.searchBar.text != "" {
+            t = filteredRecipes[indexPath.row]
+        } else {
+            t = Todos[indexPath.row]
+        }
         cell.titleLabel.text = t[0]
         cell.descriptionLabel.text = t[1]
         if t[3] == "true" {
@@ -54,6 +78,7 @@ class TodoUITableViewController: UITableViewController {
         cell.selectionStyle = UITableViewCellSelectionStyle.none
         return cell
     }
+    
 
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
@@ -79,6 +104,7 @@ class TodoUITableViewController: UITableViewController {
         saveTodos()
     }
 
+    
     func saveTodos() {
         UserDefaults.standard.set(Todos, forKey: "Todos")
     }
@@ -142,4 +168,10 @@ class TodoUITableViewController: UITableViewController {
         }
         return false
     }
+}
+extension TodoUITableViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        filterContentForSearchText(searchText: searchController.searchBar.text!)
+    }
+    
 }

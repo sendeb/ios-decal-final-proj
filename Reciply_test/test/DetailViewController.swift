@@ -16,6 +16,9 @@ class DetailViewController: UIViewController {
     var index: NSIndexPath = NSIndexPath()
     var storedData: [String] = []
     
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         recipeName.isUserInteractionEnabled = true
@@ -25,6 +28,7 @@ class DetailViewController: UIViewController {
         ingrdientsName.text = storedData[1]
         directions.text = storedData[2]
         // Do any additional setup after loading the view.
+        
     }
     
     override func didReceiveMemoryWarning() {

@@ -1,6 +1,6 @@
 //
-//  SecondViewController.swift
-//  Reciply
+//  ViewController.swift
+//  Reciply_buttons
 //
 //  Created by Debleena Sengupta on 12/6/16.
 //  Copyright © 2016 Debleena Sengupta. All rights reserved.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

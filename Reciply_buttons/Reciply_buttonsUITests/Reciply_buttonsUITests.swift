@@ -1,6 +1,6 @@
 //
-//  ReciplyUITests.swift
-//  ReciplyUITests
+//  Reciply_buttonsUITests.swift
+//  Reciply_buttonsUITests
 //
 //  Created by Debleena Sengupta on 12/6/16.
 //  Copyright © 2016 Debleena Sengupta. All rights reserved.
@@ -8,7 +8,7 @@
 
 import XCTest
 
-class ReciplyUITests: XCTestCase {
+class Reciply_buttonsUITests: XCTestCase {
         
     override func setUp() {
         super.setUp()

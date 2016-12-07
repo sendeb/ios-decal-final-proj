@@ -1,14 +1,14 @@
 //
-//  ReciplyUITests.swift
-//  ReciplyUITests
+//  testUITests.swift
+//  testUITests
 //
-//  Created by Debleena Sengupta on 12/6/16.
-//  Copyright © 2016 Debleena Sengupta. All rights reserved.
+//  Created by Ziwei Yin on 10/16/16.
+//  Copyright © 2016 Ziwei Yin. All rights reserved.
 //
 
 import XCTest
 
-class ReciplyUITests: XCTestCase {
+class testUITests: XCTestCase {
         
     override func setUp() {
         super.setUp()

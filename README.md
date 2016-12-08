@@ -15,8 +15,10 @@ Our app allows users to conveniently store recipies and other associated tasks.
 
 ##Control Flow:
 * When user logs on they can see most recently added recipes and have option to add new recipe
+* User can swipe to delete a recipe or click to view.
+* User can click to view a recipe and intuitively edit the text.
 * User can search existing recipes by title or ingredeints
-* "Find recipe" feature will allow user to input recipe or ingrdients and an online search will produce a list of possible results
+* Grocery List view allows for adding and swipe to delete. 
 
 ##Implementation:
 

@@ -26,9 +26,6 @@
 		C2A9F1E11DB434AC00B67350 /* AddUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A9F1E01DB434AC00B67350 /* AddUIViewController.swift */; };
 		C2A9F1E21DB434AC00B67350 /* AddUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A9F1E01DB434AC00B67350 /* AddUIViewController.swift */; };
 		C2A9F1E31DB434AC00B67350 /* AddUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A9F1E01DB434AC00B67350 /* AddUIViewController.swift */; };
-		C2A9F1E51DB434BD00B67350 /* StatUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A9F1E41DB434BD00B67350 /* StatUIViewController.swift */; };
-		C2A9F1E61DB434BD00B67350 /* StatUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A9F1E41DB434BD00B67350 /* StatUIViewController.swift */; };
-		C2A9F1E71DB434BD00B67350 /* StatUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A9F1E41DB434BD00B67350 /* StatUIViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,7 +65,6 @@
 		C2A9F1D01DB4337900B67350 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C2A9F1DC1DB4348900B67350 /* TodoUITableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoUITableViewController.swift; sourceTree = "<group>"; };
 		C2A9F1E01DB434AC00B67350 /* AddUIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddUIViewController.swift; sourceTree = "<group>"; };
-		C2A9F1E41DB434BD00B67350 /* StatUIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatUIViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,7 +124,6 @@
 				C2A9F1B21DB4337900B67350 /* test.xcdatamodeld */,
 				C2A9F1DC1DB4348900B67350 /* TodoUITableViewController.swift */,
 				C2A9F1E01DB434AC00B67350 /* AddUIViewController.swift */,
-				C2A9F1E41DB434BD00B67350 /* StatUIViewController.swift */,
 				C25BAE1C1DB44B3E0090C7C8 /* TodoTableViewCell.swift */,
 				377910BB1DF898AC0024A2C2 /* DetailViewController.swift */,
 				377910BF1DF8BAC40024A2C2 /* GroceryListTableViewController.swift */,
@@ -293,7 +288,6 @@
 				C2A9F1AE1DB4337900B67350 /* ViewController.swift in Sources */,
 				C2A9F1DD1DB4348900B67350 /* TodoUITableViewController.swift in Sources */,
 				C25BAE1D1DB44B3E0090C7C8 /* TodoTableViewCell.swift in Sources */,
-				C2A9F1E51DB434BD00B67350 /* StatUIViewController.swift in Sources */,
 				C2A9F1AC1DB4337900B67350 /* AppDelegate.swift in Sources */,
 				C2A9F1E11DB434AC00B67350 /* AddUIViewController.swift in Sources */,
 				C2A9F1B41DB4337900B67350 /* test.xcdatamodeld in Sources */,
@@ -308,7 +302,6 @@
 			files = (
 				C2A9F1C41DB4337900B67350 /* testTests.swift in Sources */,
 				C2A9F1DE1DB4348900B67350 /* TodoUITableViewController.swift in Sources */,
-				C2A9F1E61DB434BD00B67350 /* StatUIViewController.swift in Sources */,
 				C25BAE1E1DB44B3E0090C7C8 /* TodoTableViewCell.swift in Sources */,
 				C2A9F1E21DB434AC00B67350 /* AddUIViewController.swift in Sources */,
 			);
@@ -320,7 +313,6 @@
 			files = (
 				C2A9F1CF1DB4337900B67350 /* testUITests.swift in Sources */,
 				C2A9F1DF1DB4348900B67350 /* TodoUITableViewController.swift in Sources */,
-				C2A9F1E71DB434BD00B67350 /* StatUIViewController.swift in Sources */,
 				C25BAE1F1DB44B3E0090C7C8 /* TodoTableViewCell.swift in Sources */,
 				C2A9F1E31DB434AC00B67350 /* AddUIViewController.swift in Sources */,
 			);

@@ -18,9 +18,6 @@ class AddUIViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        titleTxT.placeholder = "Recipe Name"
-        contentTxT.placeholder = "Ingredients"
-        directionsTxT.placeholder = "Directions"
         
     }
 

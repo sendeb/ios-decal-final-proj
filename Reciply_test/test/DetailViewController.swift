@@ -18,8 +18,6 @@ class DetailViewController: UIViewController {
     var storedData: [String] = []
     
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         recipeName.isUserInteractionEnabled = true
@@ -40,17 +38,11 @@ class DetailViewController: UIViewController {
     
      // MARK: - Navigation
     @IBAction func addToGroceryList(_ sender: AnyObject) {
-        groceryButton.setTitle("ADDED", for: .normal)
+        groceryButton.setTitle("Added!", for: .normal)
         let t = ingrdientsName.text!.components(separatedBy: ",")
         var groceries = UserDefaults.standard.object(forKey: "groceryList") as! [String]
         groceries = groceries + t
-        print (t)
-        print (groceries)
         UserDefaults.standard.set(groceries, forKey: "groceryList")
-        var tmp = UserDefaults.standard.object(forKey: "groceryList") as! [String]
-        print ("tmp count")
-        print(tmp.count)
-        
     }
      
      // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -60,8 +52,7 @@ class DetailViewController: UIViewController {
             let vc = segue.destination as! UINavigationController
             let tvc = vc.topViewController as! TodoUITableViewController
             var todos = UserDefaults.standard.object(forKey: "Todos") as! [[String]]
-            todos[index.row] = t
-            var tmp = todos[index.row]
+            //todos[index.row] = t
             var i = 1
             var prev = todos[0]
             var curr = todos[0]
@@ -72,7 +63,6 @@ class DetailViewController: UIViewController {
                 prev = curr
                 i = i + 1
             }
-            
             //todos.remove(at: .indexPath.row)
             //tableView.deleteRows(at: [indexPath], with: .fade)
             UserDefaults.standard.set(todos, forKey: "Todos")

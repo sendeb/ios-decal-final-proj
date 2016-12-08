@@ -24,7 +24,7 @@ class GroceryListTableViewController: UITableViewController {
     
     func loadSavedGroceries() {
         if UserDefaults.standard.object(forKey: "groceryList") != nil {
-            var gl = UserDefaults.standard.object(forKey: "groceryList") as! [String]
+            let gl = UserDefaults.standard.object(forKey: "groceryList") as! [String]
             for t in gl {
                 groceryList.append(t)
             }
@@ -33,8 +33,8 @@ class GroceryListTableViewController: UITableViewController {
     }
 
     @IBAction func addGroceries(_ sender: AnyObject) {
-        let alert = UIAlertController(title: "Some Title", message: "Enter a text", preferredStyle: .alert)
-        alert.addTextField { (textField) in textField.text = "Some default text"}
+        let alert = UIAlertController(title: "New Grocery Item", message: "Enter a food", preferredStyle: .alert)
+        alert.addTextField { (textField) in textField.placeholder = "Food item..."}
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in
             let textField = alert?.textFields![0] // Force unwrapping because we know it exists.
             self.groceryList.insert((textField?.text)!, at:0)
@@ -42,8 +42,7 @@ class GroceryListTableViewController: UITableViewController {
             self.tableView.reloadData()
         }))
         
-        alert.addAction(UIAlertAction(title: "Cancel", style: .default, handler: { [weak alert] (_) in
-        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .default))
         
         // 4. Present the alert.
         self.present(alert, animated: true, completion: nil)

@@ -32,15 +32,12 @@ class TodoUITableViewController: UITableViewController {
         searchController.dimsBackgroundDuringPresentation = false
         definesPresentationContext = true
         tableView.tableHeaderView = searchController.searchBar
-        var tmp = UserDefaults.standard.object(forKey: "groceryList") as! [String]
-        print ("in main")
-        print(tmp.count)
         
     }
     
     func filterContentForSearchText(searchText: String, scope: String = "All") {
         filteredRecipes = Todos.filter { recipe in
-            return recipe[0].lowercased().contains(searchText.lowercased()) || recipe[1].lowercased().contains(searchText.lowercased())
+            return recipe[0].lowercased().contains(searchText.lowercased()) || recipe[1].lowercased().contains(searchText.lowercased()) || recipe[2].lowercased().contains(searchText.lowercased())
         }
         tableView.reloadData()
     }
@@ -59,9 +56,6 @@ class TodoUITableViewController: UITableViewController {
         if searchController.isActive && searchController.searchBar.text != "" {
             return filteredRecipes.count
         }
-        var tmp = UserDefaults.standard.object(forKey: "groceryList") as! [String]
-        print ("in main")
-        print(tmp.count)
         return Todos.count
     }
 
@@ -74,13 +68,7 @@ class TodoUITableViewController: UITableViewController {
             t = Todos[indexPath.row]
         }
         cell.titleLabel.text = t[0]
-        cell.descriptionLabel.text = t[1]
-        if t[3] == "true" {
-            cell.doneLabel.text = "Done!"
-        }
-        else {
-            cell.doneLabel.text = "Hurry!"
-        }
+        cell.descriptionLabel.text = ""//t[1]
         cell.backgroundColor = Colors[indexPath.row % 10]
         cell.selectionStyle = UITableViewCellSelectionStyle.none
         return cell
@@ -99,16 +87,8 @@ class TodoUITableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell = tableView.cellForRow(at: indexPath) as! TodoTableViewCell
-        if cell.doneLabel.text == "Done!" {
-            Todos[indexPath.row][3] = "false"
-            cell.doneLabel.text = "Hurry!"
-        }
-        else if cell.doneLabel.text == "Hurry!" {
-            Todos[indexPath.row][3] = "true"
-            cell.doneLabel.text = "Done!"
-        }
-        saveTodos()
+        //let cell = tableView.cellForRow(at: indexPath) as! TodoTableViewCell
+        //saveTodos()
     }
 
     
@@ -130,10 +110,10 @@ class TodoUITableViewController: UITableViewController {
     // MARK: - Navigation
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "ShowStat" {
-            let vc = segue.destination as! StatUIViewController
-            vc.numberfinished = countfinished()
-        }
+//        if segue.identifier == "ShowStat" {
+//            let vc = segue.destination as! StatUIViewController
+//            vc.numberfinished = countfinished()
+//        }
         if (segue.identifier == "showDetail") {
             let detailViewController: DetailViewController = segue.destination as! DetailViewController
             let selectedIndexPath:NSIndexPath = self.tableView.indexPathForSelectedRow! as NSIndexPath
@@ -161,11 +141,11 @@ class TodoUITableViewController: UITableViewController {
         return c
     }
 
-    func loadsampleTodoLists() {
-        let todo1 = ["Swim", "Go swimming tomorrow", String(Date().timeIntervalSince1970), "false"]
-        let todo2 = ["Eat", "Eat Dinner tomorrow", String(Date().timeIntervalSince1970), "false"]
-        Todos += [todo1, todo2]
-    }
+//    func loadsampleTodoLists() {
+//        let todo1 = ["Swim", "Go swimming tomorrow", String(Date().timeIntervalSince1970), "false"]
+//        let todo2 = ["Eat", "Eat Dinner tomorrow", String(Date().timeIntervalSince1970), "false"]
+//        Todos += [todo1, todo2]
+//    }
 
     func loadColors() {
         let c1 = UIColor(displayP3Red: 246/256, green: 228/256, blue: 204/256, alpha: 0.5)

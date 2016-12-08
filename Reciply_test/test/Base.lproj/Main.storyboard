@@ -89,7 +89,7 @@
             </objects>
             <point key="canvasLocation" x="3730.4000000000001" y="119.1904047976012"/>
         </scene>
-        <!--Title-->
+        <!--Grocery List-->
         <scene sceneID="xVA-iR-SqD">
             <objects>
                 <tableViewController id="tvP-U2-Cbu" customClass="GroceryListTableViewController" customModule="test" sceneMemberID="viewController">
@@ -155,7 +155,7 @@
                             <outlet property="delegate" destination="tvP-U2-Cbu" id="qLp-ed-Cgb"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Title" id="4wh-xo-4et">
+                    <navigationItem key="navigationItem" title="Grocery List" id="4wh-xo-4et">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="W2T-JA-Pwe">
                             <connections>
                                 <action selector="addGroceries:" destination="tvP-U2-Cbu" id="ILs-cY-wXx"/>
@@ -354,6 +354,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="eGI-v0-gwj"/>
+        <segue reference="EWd-F8-ZH4"/>
     </inferredMetricsTieBreakers>
 </document>
